@@ -1,5 +1,8 @@
 package pl.poznanski.chat;
 
+/*
+Zwykła klasa dto ,2 pola setery getery oraz konstruktor parametrowy i bezparametrowy
+ */
 public class ChatMessage {
     private String value;
     private String user;

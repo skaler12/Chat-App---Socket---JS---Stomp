@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello chat!</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 </head>
-<body onload="connect()">
-    <div>
-        <label>User:</label><input id = "user" type="text"/><br>
+<body onload="connect()" style="background: snow">
+    <div class="container">
+        <div class="header" style="text-align: center; font-size: xx-large; padding: 40px">
+            Chat Application <br>
+        </div>
+        <div style="text-align: center; font-size: large; height: 500px">
+        <label style="margin-left: 67px">User:</label><input id = "user" type="text"/><br>
         <label>Your message:</label><input id = "messageToSend" type="text"/><br>
         <button onclick="sendMessage()">Send</button>
         <p id ="response"></p>
+        </div>
+        <div id = "footer" style="text-align: center">
+            Chat JS App. Page on the web from 2020. &copy; All rights reserved.
+            <br/>
+            Created by Skaler12
+            <br>
+            <a href="https://github.com/skaler12">Git Hub Profile ! </a>
+        </div>
     </div>
     <script src="js.js"></script>
     <script src="stomp.js"></script>
