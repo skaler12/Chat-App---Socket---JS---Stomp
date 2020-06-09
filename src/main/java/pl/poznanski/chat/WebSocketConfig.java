@@ -12,12 +12,14 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     //rejestrujemy nasz endpoint na /chat - uzywamy Stamp'a
     @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry){
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+
         registry.addEndpoint("/chat");
     }
+
     //ustawiamy, konfigurujemy naszego brokera
     @Override
-    public void configureMessageBroker(MessageBrokerRegistry registry){
+    public void configureMessageBroker(MessageBrokerRegistry registry) {
         //topic to mój messsage broker
         registry.enableSimpleBroker("/topic");
         registry.setApplicationDestinationPrefixes("/app");

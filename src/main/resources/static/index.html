@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Hello chat!</title>
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="css/basic.css" type="text/css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
     <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+
 </head>
-<body onload="connect()" style="background: snow">
-    <div class="container">
-        <div class="header" style="text-align: center; font-size: xx-large; padding: 40px">
-            Chat Application <br>
-        </div>
-        <div style="text-align: center; font-size: large; height: 500px">
-        <label style="margin-left: 67px">User:</label><input id = "user" type="text"/><br>
-        <label>Your message:</label><input id = "messageToSend" type="text"/><br>
-        <button onclick="sendMessage()">Send</button>
-        <p id ="response"></p>
-        </div>
-        <div id = "footer" style="text-align: center">
-            Chat JS App. Page on the web from 2020. &copy; All rights reserved.
-            <br/>
-            Created by Skaler12
-            <br>
-            <a href="https://github.com/skaler12">Git Hub Profile ! </a>
-        </div>
+<body onload="connect()">
+<div class="container">
+    <div class="header">
+        Chat Application <br>
+
+    <div style="text-align: center; font-size: large; height: 450px">
+        <label style="margin-left: 50px; font-size: large; font-weight: bold">Your username:  </label>
+        <input style="height: 30px; width: 150px;" id="user" type="text"/><br>
+        <br>
+        <label style="margin-left: 30px; font-size: large;font-weight: bold">Your message: </label>
+        <input style="height: 50px; width: 250px;" id="messageToSend" type="text"/><br>
+        <br>
+        <button class="btn btn-warning" style="color: white" onclick="sendMessage()"> Send </button>
+        <br>
+        <p style="text-align: left; color: white; font-weight: bold" id="response"></p>
     </div>
-    <script src="js.js"></script>
-    <script src="stomp.js"></script>
+
+
+    <div id="footer" style="text-align: center; font-size: large" >
+
+            <a class="btn btn-warning" href="https://spring-boot-gp.herokuapp.com/" role="button" style="color: white; font-size: x-large">Go Back</a><br>
+            <br>
+        Chat JS App. Page on the web from 2020. &copy; All rights reserved.
+        <br/>
+        Created by Skaler12
+        <br>
+        <a href="https://github.com/skaler12" style="color: black">Git Hub Profile ! </a>
+    </div>
+</div>
+<script src="js.js"></script>
+<script src="stomp.js"></script>
 
 </body>
 </html>

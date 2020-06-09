@@ -26,8 +26,11 @@ public class ChatMessage {
     public ChatMessage(String value) {
         this.value = value;
     }
-    public ChatMessage(){
 
-    };
+    public ChatMessage() {
+
+    }
+
+    ;
 
 }
